@@ -109,8 +109,8 @@ int main()
 	beginningcycles = get_timer();      // store current cycle-count in a local
 
 	//Plaintext & Key
-		printf("plaintext: %x%x%x%x \n",in[0], in[1], in[2], in[3]);
-		printf("Key: %x%x%x%x \n",key[0], key[1], key[2], key[3]);
+		//printf("plaintext: %x%x%x%x \n",in[0], in[1], in[2], in[3]);
+		//printf("Key: %x%x%x%x \n",key[0], key[1], key[2], key[3]);
 
 		//RoundKeys
 		unsigned int RoundKey[3] = {KeyExpansion(0),KeyExpansion(1),KeyExpansion(2)};
