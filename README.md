@@ -7,4 +7,4 @@ This method is implemented in software using C programming language and the incr
 After that this efficiently modified S-AES is implemented in ARM Cortex-M4 using Embedded-C. 
 Various operation modes used in block ciphers are also implemented over S-AES and compared between each other. 
 The main purpose of this research was to integrate S-AES into Lightweight Cryptography applications.
-Because of this goal, the algorithm was implemented in ARM Cortex-M4 which has 168 MHz clock speed.
+To reach this goal, the algorithm was implemented on Intel Core i7 2.8 GHz processor and on ARM Cortex-M4 168 MHz embedded processor.
