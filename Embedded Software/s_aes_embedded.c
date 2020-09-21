@@ -23,21 +23,6 @@ unsigned int getSBoxValue(unsigned int num)
 	return sbox[num];
 }
 
-
-
-/*unsigned int getSBoxInvert(unsigned int num)
-{
-	unsigned int rsbox[16] =
-	{
-		0x0a, 0x05, 0x09, 0x0b,
-		0x01, 0x07, 0x08, 0x0f,
-		0x06, 0x00, 0x02, 0x03,
-		0x0c, 0x04, 0x0d, 0x0e
-	};
-	return rsbox[num];
-}
-*/
-
 //function of RotWords
 unsigned char RotWords (unsigned char rotating)
 {
@@ -46,14 +31,8 @@ unsigned char RotWords (unsigned char rotating)
 }
 
 //function of MixColumns
-//MixColumns is computed by 4*state[i] in GF(2^4). It is represented by a look-up table for performance upgrade.
 unsigned int MixColumns (unsigned int value)
 {
-	if (value==0){
-		printf("Finite Field error \n");
-		return 1;
-}
-	else{
 		unsigned int ResultofMult[16] =
 		{
 			0x00,0x04,0x08,0x0c,
@@ -62,18 +41,7 @@ unsigned int MixColumns (unsigned int value)
 			0x05,0x01,0x0d,0x09
 		};
 		return ResultofMult[value];
-	};
 }
-
-/*unsigned int ShiftRows (int j)
-{
-	unsigned int temp, state[4];
-	temp = state[2];
-	state[2] = state[3];
-	state[3] = temp;
-	return state[j];
-}
-*/
 
 //function of KeyExpansion
 unsigned int KeyExpansion (int i)
