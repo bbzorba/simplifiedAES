@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 /*
-developed by Barýþ Berk Zorba
+developed by BarÄ±ÅŸ Berk Zorba
 Test Vectors;
 
 Plaintext:D728
