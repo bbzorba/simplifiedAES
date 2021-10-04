@@ -1,10 +1,2 @@
 # simplifiedAES
-Advanced Encryption Standard is a commonly used symmetric key encryption algorithm in commercial and educational applications.
-In our academic research, we concentrated on Simplified AES (S-AES) which is an educational algorithm and handled a performance upgrade in MixColumns state using look-up tables. 
-The results of the multiplication in MixColumns are applied in Galois Field ($2^4$).
-These results are written in these look-up tables so that less operation occurs and the throughput increases. 
-This method is implemented in software using C programming language and the increase in performance is shown. 
-After that this efficiently modified S-AES is implemented in ARM Cortex-M4 using Embedded-C. 
-Various operation modes used in block ciphers are also implemented over S-AES and compared between each other. 
-The main purpose of this research was to integrate S-AES into Lightweight Cryptography applications.
-To reach this goal, the algorithm was implemented on Intel Core i7 2.8 GHz processor and on ARM Cortex-M4 168 MHz embedded processor.
+C and Embedded C  implementations of Simplified AES using 3 different methods in MixColumns layer.
