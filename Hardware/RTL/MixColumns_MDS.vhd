@@ -7,7 +7,7 @@ Port ( mixIn : in  STD_LOGIC_VECTOR (15 downto 0);
 end mixcolumns;
 
 
-architecture Behavioral of mixcolumns_mds is
+architecture Behavioral of mixcolumns is
 signal nibblein0, nibblein1, nibblein2, nibblein3, nibbleout0, nibbleout1, nibbleout2, nibbleout3 : std_logic_vector(3 downto 0);
 
 component multby4 is
