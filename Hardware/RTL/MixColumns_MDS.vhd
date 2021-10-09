@@ -1,13 +1,13 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity mixcolumns is
+entity mix_columns is
 Port ( mixIn : in  STD_LOGIC_VECTOR (15 downto 0);
        mixOut : out  STD_LOGIC_VECTOR (15 downto 0));
-end mixcolumns;
+end mix_columns;
 
 
-architecture Behavioral of mixcolumns is
+architecture Behavioral of mix_columns is
 signal nibblein0, nibblein1, nibblein2, nibblein3, nibbleout0, nibbleout1, nibbleout2, nibbleout3 : std_logic_vector(3 downto 0);
 
 component multby4 is
