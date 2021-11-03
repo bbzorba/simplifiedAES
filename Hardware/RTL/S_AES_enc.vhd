@@ -3,11 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity S_AES_enc is
 			
-Port ( clk : in  STD_LOGIC;
-       plaintext : in  STD_LOGIC_VECTOR (15 downto 0);
+Port (   plaintext : in  STD_LOGIC_VECTOR (15 downto 0);
 		 key : in  STD_LOGIC_VECTOR (15 downto 0);
-		 ciphertext : out STD_LOGIC_VECTOR (15 downto 0);
-		 encyrption_done : out STD_LOGIC
+		 ciphertext : out STD_LOGIC_VECTOR (15 downto 0)
 		 );
 end S_AES_enc;
 
@@ -33,7 +31,7 @@ signal roundkey1 : std_logic_vector (15 downto 0) := x"a73b";
 signal roundkey2 : std_logic_vector (15 downto 0) := x"1c27";
 signal roundkey3 : std_logic_vector (15 downto 0) := x"7651";
 signal cipher : STD_LOGIC_VECTOR (15 downto 0);
-signal encrypt_done : STD_LOGIC;
+signal encrypt_done : STD_LOGIC := '0';
 
 --signal rcon1 : std_logic_vector (7 downto 0):= x"80";
 --signal rcon2 : std_logic_vector (7 downto 0):= x"30";
@@ -45,11 +43,5 @@ o1: round1 port map(plaintext, roundkey1, roundkey2, round1_out);
 o2: round2 port map(round1_out, roundkey3, cipher);
 
 ciphertext <= cipher;
-
-if ciphertext = x"0738" then
-	encrypt_done <= '1';
-end if;
-
-encyrption_done<= encrypt_done;	
 
 end Behavioral;
