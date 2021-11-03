@@ -12,8 +12,7 @@ architecture bench of S_AES_enc_tb is
   Port ( clk : in  STD_LOGIC;
          plaintext : in  STD_LOGIC_VECTOR (15 downto 0);
   		 key : in  STD_LOGIC_VECTOR (15 downto 0);
-  		 ciphertext : out STD_LOGIC_VECTOR (15 downto 0);
-		 encyrption_done : out STD_LOGIC
+  		 ciphertext : out STD_LOGIC_VECTOR (15 downto 0)
   		 );
   end component;
 
@@ -21,6 +20,7 @@ architecture bench of S_AES_enc_tb is
   signal plaintext: STD_LOGIC_VECTOR (15 downto 0);
   signal key: STD_LOGIC_VECTOR (15 downto 0);
   signal ciphertext: STD_LOGIC_VECTOR (15 downto 0) ;
+  signal encrypt_done : STD_LOGIC := '0';
   constant clock_period : time := 10 ns;
   
 begin
@@ -38,11 +38,18 @@ end process;
 									 
  stimulus: process
   begin
-    wait for 10 ns;
 	 plaintext <= x"6f6b";
 	 key <= x"a73b";
     wait;
   end process;
+  
+ check: process(ciphertext)
+begin
+if ciphertext = x"0738" then
+	encrypt_done <= '1';
+end if;
+
+end process;
 
 
 end;
