@@ -9,10 +9,9 @@ end;
 architecture bench of S_AES_enc_tb is
 
   component S_AES_enc
-  Port ( clk : in  STD_LOGIC;
-         plaintext : in  STD_LOGIC_VECTOR (15 downto 0);
-  		 key : in  STD_LOGIC_VECTOR (15 downto 0);
-  		 ciphertext : out STD_LOGIC_VECTOR (15 downto 0)
+  Port ( plaintext : in  STD_LOGIC_VECTOR (15 downto 0);
+  	 key : in  STD_LOGIC_VECTOR (15 downto 0);
+  	 ciphertext : out STD_LOGIC_VECTOR (15 downto 0)
   		 );
   end component;
 
