@@ -24,7 +24,7 @@ architecture bench of S_AES_enc_tb is
   
 begin
 
-  uut: S_AES_enc port map ( clk        => clk,
+  uut: S_AES_enc port map (
                             plaintext  => plaintext,
                             key        => key,
                             ciphertext => ciphertext );
